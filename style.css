@@ -5,12 +5,13 @@
 #links ul {
 	list-style-type:  none;
 }
-#videos {
-	float: right;
+#player {
+	border: 0;
 }
 #videos ul {
 	list-style-type: none;
 }
 #vidplay {
 	float: left;
+	width: 650px;
 }
