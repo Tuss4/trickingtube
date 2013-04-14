@@ -1,0 +1,16 @@
+#links {
+	float: left;
+}
+
+#links ul {
+	list-style-type:  none;
+}
+#videos {
+	float: right;
+}
+#videos ul {
+	list-style-type: none;
+}
+#vidplay {
+	float: left;
+}
