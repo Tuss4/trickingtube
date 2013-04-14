@@ -5,12 +5,12 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" "style.css">
 	<script>
-	function getthisid(datas){
-		var newurl = "http://youtube.com/embed/"+datas+"?autoplay=1";
-		return newurl;
+	function getThisId(datum){
+		var newUrl = "http://youtube.com/embed/"+datum+"?autoplay=1";
+		return newUrl;
 	}
-	function changeThisId(datas){
-		document.getElementById("player").setAttribute("src",getthisid(datas));
+	function changeThisId(datum){
+		document.getElementById("player").setAttribute("src",getThisId(datum));
 	}
 	</script>
 	<script src="functions.js"></script>
