@@ -6,7 +6,7 @@ function showMyVideos(data) {
     var entry = entries[i];
     var title = entry.title.$t;
     var vid = entry.id.$t.substr(42,53);
-    html.push('<li onclick=changethisshit("',vid,'")>', title, '</li>');
+    html.push('<li onclick=changeThisId("',vid,'")>', title, '</li>');
   }
   html.push('</ul>');
   document.getElementById('videos').innerHTML = html.join('');
