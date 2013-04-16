@@ -22,3 +22,8 @@ body {
 #footer {
 	text-align: center;
 }
+.highlighted {
+	background-color: #CCC;
+	color: #3399FF;
+	font-weight: bold;
+}
