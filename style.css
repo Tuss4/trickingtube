@@ -12,15 +12,25 @@ body {
 #player {
 	border: 0;
 }
+#videos {
+	float: left;
+}
 #videos ul {
 	list-style-type: none;
 }
+#videos ul li {
+	margin-bottom: .5em;
+}
 #vidplay {
-	float: left;
+	float: right;
 	width: 650px;
 }
 #footer {
+	clear: both;
 	text-align: center;
+}
+button {
+	display: none;
 }
 .highlighted {
 	background-color: #CCC;
