@@ -9,7 +9,7 @@ Just tweaking the source code provided by Youtube and Google.
 
 UPDATE: 4/14/2013
 
-Trick FEED is now compatible with mobile devices. 
+trickFEED is now compatible with mobile devices. 
 
 Changes:
 - The app now uses iFrame embed instead of the flash embed
