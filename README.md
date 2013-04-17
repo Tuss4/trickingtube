@@ -1,4 +1,4 @@
-trickingtube
+trickFEED
 ============
 
 http://trickingtube.tuss4dzigns.com/simpletrickfeed.html
