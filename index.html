@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>trickFEED V3.0 BETA: Home</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="icon" type="image/png" href="http://tuss4dzigns.com/icon.png" />
+	<style>
+		body {
+			font-family: arial, sans-serif, verdana;
+			font-size: 1em;
+		}
+		ul {
+			list-style-type: none;
+		}
+		#menu li{
+			display: inline-block;
+			vertical-align: top;
+		}
+		#tumbls li{
+			display: inline-block;
+			vertical-align: top;
+			margin: .25%;
+		}
+		.highlight {
+			background-color: #CCC;
+			color: #3399FF;
+			font-weight: bold;
+		}
+		#videos {
+			float: left;
+			vertical-align: top;
+		}
+		#vidplay {
+			float: right;
+			vertical-align: top;
+		}
+		#footer {
+			clear: both;
+		}
+		.highlighted {
+			background-color: #CCC;
+			color: #3399FF;
+			font-weight: bold;
+		}
+		button {
+			border: 0;
+		}
+		#lmenu button{
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<script>
+	var pageTitle = 'trickFEED V3.0 BETA: ';
+		$(document).ready(function() {
+			$('#one').click(function() {
+				$('#content').load('ytpjq.html');
+				$('#header h1').text('trickFEED::YouTube');
+				document.title = pageTitle + 'YouTube';
+			});
+			$('#two').click(function() {
+				$('#content').load('tumblr.html');
+				$('#header h1').text('trickFEED::Tumblr');
+				document.title = pageTitle + 'Tumblr';
+			});
+			$('#three').click(function() {
+				$('#content').load('twitter.html');
+				$('#header h1').text('trickFEED::Twitter');
+				document.title = pageTitle + 'Twitter';
+			});
+			$('#home').click(function(){
+				$('#content').text('Click on a feed above to begin!');
+				$('#header h1').text('trickFEED::Home');
+				document.title = pageTitle;
+			});
+		});
+	</script>
+	<div id="header">
+		<h1>trickFEED::Home</h1>
+	</div>
+	<div id="menu">
+		<ul id="lmenu">
+			<li id="home"><button>Home</button></li>
+			<li id="one"><button>YouTube</button></li>
+			<li id="two"><button>Tumblr</button></li>
+			<li id="three"><button>Twitter</button></li>
+		</ul>
+	</div>
+	<div id="content">Click on a feed above to begin!</div>
+	<div id="footer">
+      
+	Built on April 13th, 2013 by 
+    <a href="http://tuss4dzigns.com">Tuss4 Dzigns</a></div>
+</body>
+</html>

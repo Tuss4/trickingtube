@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+</head>
+<body>
+	<script>
+		var twitTricksFeed = "http://search.twitter.com/search.json?q=%23tricking&amp;result_type=recent&amp;callback=?";
+		$(document).ready(function (){
+			$.getJSON(twitTricksFeed, function(data){
+				var output = "<ul>";
+				for(var i in data.results){
+					var tweets = data.results[i];
+					output += "<li><a href='http://twitter.com/"+tweets.from_user+"'>"+tweets.from_user+"</a>: "+ tweets.text +"</li>";
+				}
+				output += "</ul>"
+				document.getElementById("trickTweets").innerHTML = output;
+			});
+		});
+	</script>
+	<div id="trickTweets">
+	</div>
+</body>
+</html>

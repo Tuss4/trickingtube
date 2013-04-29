@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="http://tuss4dzigns.com/icon.png">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+	function getThisId(datum){
+		var newUrl = "http://youtube.com/embed/"+datum+"?autoplay=1";
+		return newUrl;
+	}
+	function changeThisId(datum){
+		document.getElementById("ytplayer").setAttribute("src",getThisId(datum));
+	}
+	</script>
+	<script>
+		$(document).ready(function(){
+			var ytFeed = "http://gdata.youtube.com/feeds/api/videos?q=tricking&alt=json&format=5&max-results=15&orderby=relevance&callback=?&v=2";
+			$.getJSON(ytFeed, function(data){
+				var output = "<ul id='ytvidz'>";
+				for(var i in data.feed.entry){
+					var entries = data.feed.entry[i];
+					var vid = entries.id.$t.substring(27,38);
+					window.onload = changeThisId(data.feed.entry[0].id.$t.substring(27,38));
+					output += "<li onclick=changeThisId('"+vid+"')>"+entries.title.$t+"</li>"
+				};
+				output += "</ul>";
+				document.getElementById("videos").innerHTML = output;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="player"><iframe id="ytplayer" width="640" height="390"
+  src="http://www.youtube.com/embed/"></iframe></div>
+  	<div id="videos"></div>
+</body>
+</html>

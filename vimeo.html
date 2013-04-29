@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			window.onload = $('#vimplay').attr('src','http://player.vimeo.com/video/36056485?autoplay=1');
+		});
+	</script>
+</head>
+<body>
+	<div id="player">
+		<iframe id="vimplay" src="http://player.vimeo.com/video/VIDEO_ID" width="640" height="390" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	</div>
+	<div id="vlist">
+	</div>
+</body>
+</html>

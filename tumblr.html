@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="icon" type="image/png" href="http://tuss4dzigns.com/icon.png">
+</head>
+<body>
+	<script>
+	$(document).ready(function(){
+		var tumblrFeed = 'http://api.tumblr.com/v2/tagged?tag=tricking&api_key=VCqTYW3jSifSl7jIdDt4ssHLeJ4qx5k1bgawr5klszxeLPzi6F&limit=15&callback=?';
+		$.getJSON(tumblrFeed, function(data){
+			var output="<ul id='tvids'>";
+			for (var i in data.response){
+				var tumbs = data.response[i];
+				if(tumbs.type ==='video'){
+					output +="<li><h5>"+tumbs.caption+"</h5>"+tumbs.date+" by <a href='"+tumbs.short_url+"'>"+tumbs.blog_name+"</a><br />"+tumbs.player[2].embed_code+"</li>";
+				}
+				if(tumbs.type ==='text'){
+					output +="<li><h5>"+tumbs.title+"</h5>"+tumbs.date+" by <a href='"+tumbs.short_url+"'>"+tumbs.blog_name+"</a><br />"+tumbs.body+"</li>";
+				}
+				if(tumbs.type ==='photo'){
+					output +="<li><h5>"+tumbs.caption+"</h5>"+tumbs.date+" by <a href='"+tumbs.short_url+"'>"+tumbs.blog_name+"</a><br /><a href='"+tumbs.post_url+"' target='_blank'>View Image</a></li>";
+				}
+			}
+			output+="</ul>"
+			document.getElementById("tumbls").innerHTML=output;
+		})
+		});
+	</script>
+	<div id="tumbls"></div>
+</body>
+</html>
