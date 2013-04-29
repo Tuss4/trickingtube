@@ -21,3 +21,8 @@ Changes:
 - Mostly stylistic
 - Used jQuery to add highlight effects
 - Tweaked the CSS to have the feed on the left and the video on the right
+
+UPDATE V3.0 4/28/2013
+- All API requests are handled by jQuery's .getJSON method
+- Added buttons
+- Added twitter feed
