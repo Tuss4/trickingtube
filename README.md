@@ -26,3 +26,7 @@ UPDATE V3.0 4/28/2013
 - All API requests are handled by jQuery's .getJSON method
 - Added buttons
 - Added twitter feed
+
+UPDATE V4 5/5/2013
+- Added theater.html
+- Pulled out most of the CSS in to style.css to adhere to more of an MVC workflow
