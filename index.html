@@ -5,51 +5,17 @@
 	<title>trickFEED V3.0 BETA: Home</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<link rel="icon" type="image/png" href="http://tuss4dzigns.com/icon.png" />
-	<style>
-		body {
-			font-family: arial, sans-serif, verdana;
-			font-size: 1em;
-		}
-		ul {
-			list-style-type: none;
-		}
-		#menu li{
-			display: inline-block;
-			vertical-align: top;
-		}
-		#tumbls li{
-			display: inline-block;
-			vertical-align: top;
-			margin: .25%;
-		}
-		.highlight {
-			background-color: #CCC;
-			color: #3399FF;
-			font-weight: bold;
-		}
-		#videos {
-			float: left;
-			vertical-align: top;
-		}
-		#vidplay {
-			float: right;
-			vertical-align: top;
-		}
-		#footer {
-			clear: both;
-		}
-		.highlighted {
-			background-color: #CCC;
-			color: #3399FF;
-			font-weight: bold;
-		}
-		button {
-			border: 0;
-		}
-		#lmenu button{
-			font-size: 2em;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40530545-1', 'tuss4dzigns.com');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
 	<script>
@@ -70,6 +36,11 @@
 				$('#header h1').text('trickFEED::Twitter');
 				document.title = pageTitle + 'Twitter';
 			});
+			$('#four').click(function() {
+				$('#content').load('theater.html');
+				$('#header h1').text('trickFEED::Theater');
+				document.title = pageTitle + 'Theater';
+			});
 			$('#home').click(function(){
 				$('#content').text('Click on a feed above to begin!');
 				$('#header h1').text('trickFEED::Home');
@@ -86,12 +57,23 @@
 			<li id="one"><button>YouTube</button></li>
 			<li id="two"><button>Tumblr</button></li>
 			<li id="three"><button>Twitter</button></li>
+			<li id="four"><button>Theater</button></li>
 		</ul>
 	</div>
 	<div id="content">Click on a feed above to begin!</div>
 	<div id="footer">
       
 	Built on April 13th, 2013 by 
-    <a href="http://tuss4dzigns.com">Tuss4 Dzigns</a></div>
+    <a href="http://tuss4dzigns.com">Tuss4 Dzigns</a>
+    	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="http://trickfeed.tuss4dzigns.com" data-send="true" data-width="450" data-show-faces="false"></div>
+	</div>
 </body>
 </html>

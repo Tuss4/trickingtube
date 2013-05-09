@@ -1,0 +1,93 @@
+		body {
+			font-family: arial, sans-serif, verdana;
+			font-size: 1em;
+		}
+		a {
+			color: #0099CC;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #FF3300;
+		}
+		a:visited {
+			color: #FF0033;
+		}
+		ul {
+			list-style-type: none;
+		}
+		#menu li{
+			display: inline-block;
+			vertical-align: top;
+		}
+		#tumbls li{
+			display: inline-block;
+			vertical-align: top;
+			margin: .25%;
+		}
+		.highlight {
+			background-color: #CCC;
+			color: #3399FF;
+			font-weight: bold;
+		}
+		#videos {
+			float: left;
+			vertical-align: top;
+		}
+		#vidplay {
+			float: right;
+			vertical-align: top;
+		}
+		#footer {
+			clear: both;
+		}
+		.highlighted {
+			background-color: #CCC;
+			color: #3399FF;
+			font-weight: bold;
+		}
+		button {
+			border: 0;
+			background-color: #0066CC;
+			color: #FFF;
+		}
+		#lmenu button{
+			font-size: 2em;
+			font-weight: bold;
+		}
+		#header {
+			background-color: #0066CC;
+			color: #FFF;
+			font-style: oblique;
+			padding: .25%;
+		}
+		#videos li:hover{
+			background-color: #CCC;
+			font-weight: bold;
+			color: #0066CC;
+		}
+		#tumbls li:hover{
+			background-color: #CCC;
+			font-weight: bold;
+			color: #0066CC;
+		}
+		#content {
+			border-color: #0099CC;
+			padding: .25%;
+			border-width: .10%;
+			border-radius: 20px;
+			margin: .75%;
+			border-style: solid;
+			clear: both;
+		}
+		#footer {
+			margin: .75%;
+			border-color: #0099CC;
+			padding: .75%;
+			border-width: .10%;
+			border-style: solid;
+			border-radius: 20px;
+		}
+		#trickTweets li:hover {
+			background-color: #CCC;
+			font-weight: bold;
+		}
